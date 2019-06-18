@@ -36,3 +36,8 @@ publicVariable SeriousMode;
 publicVariable "SeriousMode";
 [[], fn_defineclasses] remoteExec ["spawn"];
 [] call DFUNC(defineClasses);
+/*
+_uid = getPlayerUID player;
+_weapon = selectRandom ["srifle_EBR_F","srifle_DMR_03_F","srifle_DMR_06_camo_F","arifle_CTARS_ghex_F","arifle_SPAR_02_blk_F","arifle_MXM_F","arifle_MX_SW_black_F"];
+Addkill = [_uid,_weapon];
+publicVariableServer "AddKill";*/

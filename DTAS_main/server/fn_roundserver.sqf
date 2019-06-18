@@ -360,8 +360,8 @@ while {true} do
 
 	_toDelete = nearestObjects [markerPos "mrkObj1", _deleteTypes, 10000];
 	_toDelete = _toDelete + ((markerPos "mrkObj1") nearObjects ["Default", 10000]); // fix for bug with detecting satchels
-	_toDelete = _toDelete + nearestObjects [getPos westMenuFlag, _deleteTypes, 100];
-	_toDelete = _toDelete + nearestObjects [getPos eastMenuFlag, _deleteTypes, 100];
+	_toDelete = _toDelete + nearestObjects [getPos WestMenu, _deleteTypes, 100];
+	_toDelete = _toDelete + nearestObjects [getPos EastMenu, _deleteTypes, 100];
 	for "_i" from 0 to ((count _toDelete) - 1) do
 	{
 		deleteVehicle (_toDelete select _i);
@@ -560,13 +560,13 @@ while {true} do
 				if (_veh isKindOf "B_MRAP_01_F") then 
 				{
 					{
-						_veh setObjectTextureGlobal [0,"Textures\hunterfront.paa"];
-						_veh setObjectTextureGlobal [1,"Textures\hunterback.paa"];
+						_veh setObjectTextureGlobal [0,"Textures\PHTS_Hunter.paa"];
 					}forEach [_tex,[0.02,0.02,0.02,1]]
 				};
 				if (_veh isKindOf "O_MRAP_02_F") then 
 				{
-					
+					//For when jeep creates one
+					//_veh setObjectTextureGlobal [0,"Textures\PHTS_Ifrit.paa"];
 											  	//White	       //Yellow    //Pink		//Cyan			//Black			//Purple		//Blue		//Red		//Green
 					private _tex = selectRandom [[1,1,1,0.8],[1,1,0,0.8],[1,0,0.2,0.8],[0,1,1,0.8],[0.02,0.02,0.02,1],[0.2,0,1,0.8],[0,0.2,1,0.8], [1,0,0,1], [0,1,0.3,0.8]];
 					{
